@@ -41,7 +41,6 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Controllers
             {
                  return View("Fail");
             }
-           
         }
     }
 }

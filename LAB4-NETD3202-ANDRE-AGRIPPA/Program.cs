@@ -1,3 +1,8 @@
+/*
+ * Name: Andre Agrippa
+ * File: Program.cs
+ * Date: 11/17/2020
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
