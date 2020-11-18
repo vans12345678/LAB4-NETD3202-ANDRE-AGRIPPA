@@ -1,0 +1,29 @@
+﻿<!--
+Name: Andre Agrippa
+Date: 11/17/2020
+File: YourAppraisal.cshtml
+-->
+@{
+    ViewData["Title"] = "YourAppraisal";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>View Appraisal</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Appraise">Appraise</a></li>
+    </ul>
+<h3>View Appraisal Page</h3>
+    <p style="text-align: center">
+        @ViewData["Message"]
+    </p>
+</body>
+
+</html>

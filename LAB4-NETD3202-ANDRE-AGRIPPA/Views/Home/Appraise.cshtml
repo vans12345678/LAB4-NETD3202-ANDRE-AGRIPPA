@@ -1,0 +1,46 @@
+﻿<!--
+Name: Andre Agrippa
+Date: 11/17/2020
+File: Appraise.cshtml
+-->
+@{
+    ViewData["Title"] = "Appraise";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+    <title>Appraise Your Textbook!</title>
+    <h2 style="text-align: center">Student4CheapTexts</h2>
+</head>
+<body>
+    <p><img id="img_logo" alt="Logo" src="../Home/Images/beach-book.jpg" /></p>
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Appraise">Appraise</a></li>
+    </ul>
+    <form action="~/Home/Appraise" method="POST">
+        <label for="title">Textbook Title:</label>
+        <input type="text" id="title" name="title" placeholder="">
+        <br />
+        <label for="isbn">Textbook ISBN:</label>
+        <input type="text" id="isbn" name="isbn" placeholder="">
+        <br />
+        <label for="version">Textbook Version</label>
+        <input type="text" id="version" name="version" placeholder="">
+        <br />
+        <label for="price">Original Purchase Price</label>
+        <input type="text" id="price" name="price" placeholder="">
+        <br />
+        <label for="Condition">Condition:</label>
+        <select name="Condition" id="Condition">
+            <option value="LikeNew">LikeNew</option>
+            <option value="Good">Good</option>
+            <option value="Bad">Bad</option>
+        </select>
+        <input type="submit" value="Appraise">
+    </form>
+
+</body>
+</html>
