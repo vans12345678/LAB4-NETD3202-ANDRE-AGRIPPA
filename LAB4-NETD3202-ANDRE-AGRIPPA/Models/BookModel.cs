@@ -30,7 +30,7 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Models
 
         }
         //Parameterized constructor
-        public BookModel(string title, int isbn, double version, double price, string condition)
+        public BookModel(string title, Int64 isbn, double version, double price, string condition)
         {
             this.title = title;
             this.isbn = isbn;
@@ -43,16 +43,22 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Models
             //Formula to calculate appraisal price
             if (condition == "Bad")
             {
-                return (price / 4);
+                return Math.Round((price / 4), 2);
             }
             if (condition == "Good")
             {
-                return (price / 3);
+                return Math.Round((price / 3), 2);
             }
             else
             {
-                return (price / 2);
+                return Math.Round((price / 2), 2);
             }
+        }
+
+        public string ToString()
+        {
+            return "Your textbook: " + title + ",  Version: " + version + " Was appraised at: $" +
+                   CalculateAppraise(price, condition);
         }
     }
 }
