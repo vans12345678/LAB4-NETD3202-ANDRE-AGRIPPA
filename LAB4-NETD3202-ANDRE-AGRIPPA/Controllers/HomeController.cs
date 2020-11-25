@@ -15,7 +15,7 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Controllers
 {
     public class HomeController : Controller
     {
-        List<BookModel> bookList = new List<BookModel>();
+        public static List<BookModel> bookList = new List<BookModel>();
         private string output;
         public IActionResult Index()
         {
@@ -34,8 +34,10 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Adds to book list
                 bookList.Add(new BookModel(book.title, book.isbn, book.version, book.price, book.condition));
                 ViewData["Message"] = book.ToString();
+
 
                 return View("YourAppraisal", book);
             }
@@ -44,17 +46,12 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Controllers
                  return View("Fail");
             }
         }
-
-        public IActionResult ViewAppraisals(List<BookModel> bookList)
+        public IActionResult ViewAppraisals()
         {
-            // foreach (BookModel item in bookList)
-            // {
-            //     output += item.ToString();
-            // }
-
-            int x = bookList.Count;
-            ViewData["Message"] = x.ToString();
-            return View("ViewAppraisals", bookList);
+            //Return book list to view appraisals
+            return View(bookList);
         }
+
+        
     }
 }

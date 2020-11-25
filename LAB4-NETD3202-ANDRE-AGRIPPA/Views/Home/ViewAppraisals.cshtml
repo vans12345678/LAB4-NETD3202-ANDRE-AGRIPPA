@@ -1,4 +1,9 @@
-﻿@{
+﻿<!--
+Name: Andre Agrippa
+Date: 11/17/2020
+File: ViewAppraisals.cshtml
+-->
+@{
     ViewData["Title"] = "ViewAppraisals";
 }
 
@@ -13,16 +18,23 @@
 </head>
 <body>
     <h2 style="text-align: center">Student4CheapTexts<img id="img_logo" alt="Logo" src="~/Images/beach-book.jpg" width="100" height="100" /></h2>
-<ul>
-    <li><a class="active" href="~/Home/Index">Home</a></li>
-    <li><a href="~/Home/Appraise">Appraise</a></li>
-    <li><a href="~/Home/ViewAppraisals">ViewAppraisals</a></li>
-</ul>
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Appraise">Appraise</a></li>
+        <li><a href="~/Home/ViewAppraisals">ViewAppraisals</a></li>
+    </ul>
 
 <h3>Your Appraisals!</h3>
-<p style="text-align: center">
-    @ViewData["Message"]
-</p>
+    <!-- Define Model, displays contents of book list-->>
+    @model IEnumerable<LAB4_NETD3202_ANDRE_AGRIPPA.Models.BookModel>
+    @foreach (var element in Model)
+    {
+        <p>
+            @element.ToString()
+        </p>
+        <hr/>
+    }
+
 </body>
 
 </html>

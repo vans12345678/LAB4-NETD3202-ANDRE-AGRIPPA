@@ -55,7 +55,7 @@ namespace LAB4_NETD3202_ANDRE_AGRIPPA.Models
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Your textbook: " + title + ",  Version: " + version + " Was appraised at: $" +
                    CalculateAppraise(price, condition);
